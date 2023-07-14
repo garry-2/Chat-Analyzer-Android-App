@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShareActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:id="@+id/splash_layout">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/animationLoader"
+            app:lottie_rawRes="@raw/loader"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Analysing Chat"
+            android:textSize="25sp"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/splash_layout2">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/networkAnimation"
+            app:lottie_rawRes="@raw/network"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sorry, We are facing problems !"
+            android:textSize="25sp"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Statistics"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginHorizontal="10dp"
+
+                />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:layout_margin="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="170dp"
+                    android:layout_height="100dp"
+                    android:elevation="30dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardUseCompatPadding="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="#D5E169"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView2"
+                            android:textColor="@color/black"
+                            android:layout_margin="5dp"
+                            android:text="Total Words"
+                            />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView_totalWords"
+                            android:textSize="24sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_margin="5dp"
+                            android:text="Total Words"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="170dp"
+                    android:layout_height="100dp"
+                    android:elevation="30dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardUseCompatPadding="true"
+                   >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="#EF9FEF"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView3"
+                            android:textColor="@color/black"
+                            android:layout_margin="5dp"
+                            android:text="Total Messages"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView_totalMessages"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_margin="5dp"
+                            android:textSize="24sp"/>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="170dp"
+                    android:layout_height="100dp"
+                    android:elevation="30dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardUseCompatPadding="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="#8CDDE8"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView5"
+                            android:textColor="@color/black"
+                            android:layout_margin="5dp"
+                            android:text="Links"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView_totalLinks"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_margin="5dp"
+                            android:textSize="24sp"/>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="170dp"
+                    android:layout_height="100dp"
+                    android:elevation="30dp"
+                    app:cardCornerRadius="5dp"
+                    app:cardUseCompatPadding="true"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="#F3AF5D"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView6"
+                            android:textColor="@color/black"
+                            android:layout_margin="5dp"
+                            android:text="Media Messages"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView_totalMediaMessages"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_margin="5dp"
+                            android:textSize="24sp"/>
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </GridLayout>
+            
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Busy Days"
+                android:textSize="24sp"
+                android:textColor="@color/black"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="10dp"
+
+                />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:layout_width="350dp"
+                android:layout_height="400dp"
+                android:id="@+id/busy_days_pie_chart"
+                />
+
+
+
+            <com.github.mikephil.charting.charts.BarChart
+
+                android:id="@+id/bar_chart"
+                android:layout_width="350dp"
+                android:layout_height="400dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView20"
+                android:textSize="24sp"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:textColor="@color/black"
+                android:text="Busy Month"/>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:layout_width="350dp"
+                android:layout_height="400dp"
+                android:id="@+id/busy_months_pie_chart"
+                />
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:layout_width="350dp"
+                android:layout_height="400dp"
+                android:id="@+id/busy_month_bar_chart"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily Timeline"
+                android:textColor="@color/black"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="24sp"/>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:layout_width="350dp"
+                android:layout_height="400dp"
+                android:id="@+id/daily_timeline"
+                android:animateLayoutChanges="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Monthly Timeline"
+                android:textColor="@color/black"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="24sp"/>
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:layout_width="350dp"
+                android:layout_height="400dp"
+                android:id="@+id/monthly_timeline"
+                android:animateLayoutChanges="true"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active Users"
+                android:textColor="@color/black"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="24sp"/>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:layout_width="350dp"
+                android:layout_height="400dp"
+                android:id="@+id/busy_users_pie_chart"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Most Common Words"
+                android:textColor="@color/black"
+                android:layout_marginVertical="20dp"
+                android:layout_marginHorizontal="10dp"
+                android:textSize="24sp"/>
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>
